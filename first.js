@@ -86,21 +86,64 @@ const a=[1,2,3,4,5,6,7,8,9,10];
 //     return pre>curr ? pre:curr;
 // })
 
-Marks=[12,23,43,45,65,87,98,87,90,97,96,93,91]
-let Tmarks = Marks.filter((val)=>{
-    return val>90;
-})  
+// Marks=[12,23,43,45,65,87,98,87,90,97,96,93,91]
+// let Tmarks = Marks.filter((val)=>{
+//     return val>90;
+// })  
 
 
-let nums=prompt("Enter a number");
-let arr=[];
-for(let i=0;i<nums;i++){
-    arr[i]=i+1;
+// let nums=prompt("Enter a number");
+// let arr=[];
+// for(let i=0;i<nums;i++){
+//     arr[i]=i+1;
+// }
+
+// let sum = arr.reduce((pre,curr)=> {
+//     return pre+curr;
+// })
+// let prod=arr.reduce((pre,curr)=>{
+//     return pre*curr
+// })
+// console.dir(window.document.body)
+// // document.body.childNodes[1].childNodes[1].innerText="ABCD"
+// let h=document.getElementById("heading")
+// console.dir(document.body.firstElementChild)
+// let div=document.querySelector("div");
+// console.dir(div)
+// let heading=document.querySelector("h1")
+let h2=document.querySelector("h2");
+let h3= h2.innerText + " From Anupam Jose";
+h2.innerText=h2.innerText + " From Anupam Jose";
+box=document.querySelectorAll(".box");
+count=1
+let color= ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+'#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+'#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
+'#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+'#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+'#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+'#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+'#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+'#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+'#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+
+for (i of box){
+    i.innerText=i.innerText+" "+ count;
+    let randColor=color[Math.floor(Math.random()*color.length)];
+    console.log(randColor);
+    i.style.background=`${randColor}`
+    count++
 }
+// for (i of box){
+//     i.
+// }
 
-let sum = arr.reduce((pre,curr)=> {
-    return pre+curr;
-})
-let prod=arr.reduce((pre,curr)=>{
-    return pre*curr
-})
+let newButton=document.createElement("button");
+newButton.innerText="Click Me";
+
+document.querySelector('body').before(newButton);
+newButton.style.background="red"
+newButton.style.color="green"
+
+let p1=document.querySelector(".para")
+p1.classList.add("para1")

@@ -1,0 +1,17 @@
+body{
+    margin: 0%;
+    border: 2px solid green;
+}
+.box{
+    margin: 2px;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+
+}
+.para{
+    color: red;
+}
+.para1{
+    color: aqua;
+}
