@@ -132,6 +132,7 @@ for (i of box){
     let randColor=color[Math.floor(Math.random()*color.length)];
     console.log(randColor);
     i.style.background=`${randColor}`
+    i.style.color="black"
     count++
 }
 // for (i of box){
@@ -147,3 +148,20 @@ newButton.style.color="green"
 
 let p1=document.querySelector(".para")
 p1.classList.add("para1")
+
+btn=document.querySelector("#btn_MC")
+let toggle=true
+btn.onclick=()=>{
+    if(toggle){
+        document.body.style.backgroundColor="black";
+        btn.innerText="Light Mode"
+        document.body.style.color="white"
+    }
+    else if (!toggle){
+        document.body.style.backgroundColor="white";
+        btn.innerText="Dark Mode"
+        document.body.style.color="black"
+    }
+        toggle=!toggle
+
+    }
